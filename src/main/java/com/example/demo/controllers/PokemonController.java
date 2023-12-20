@@ -42,4 +42,10 @@ public class PokemonController {
 		}
 		return null;
 	}
+
+    @PostMapping
+	public Pokemon postPokemon(@RequestBody Pokemon pokemon) {
+		pokemonRepository.save(pokemon);
+		return pokemon;
+	}
 }
