@@ -2,6 +2,7 @@ package com.example.demo.entities;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 
 import org.springframework.http.HttpStatus;
 
@@ -41,6 +42,10 @@ public class Entrenador {
 	private Pueblo pueblo;
 
     private String uuid;
+
+    public List<Pokemon> getPokemons() {
+        return null;
+    }
 
     
 }

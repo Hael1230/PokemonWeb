@@ -48,6 +48,13 @@ public class EntrenadorController {
         }
     }
     
-	
+	@GetMapping("/{uuid}/pokemons")
+	public List<Pokemon> entrenadorPokemon(@PathVariable Integer uuid){
+		Optional<Entrenador>entrenador=entrenadorRepository.findByUuid(uuid);
+		if(entrenador.isPresent()) {
+			return entrenador.get().getPokemons();
+		}
+		return null;
+	}
     
 }
