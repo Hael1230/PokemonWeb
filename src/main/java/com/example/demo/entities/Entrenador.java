@@ -3,6 +3,8 @@ package com.example.demo.entities;
 import java.io.Serializable;
 import java.sql.Date;
 
+import org.springframework.http.HttpStatus;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,6 +30,8 @@ public class Entrenador {
 
     private String apellido;
 
+    private String email;
+
     private Date fecha_nacimiento;
 
     private Date fecha_vinculacion;
@@ -37,4 +41,6 @@ public class Entrenador {
 	private Pueblo pueblo;
 
     private String uuid;
+
+    
 }
